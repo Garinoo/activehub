@@ -8,7 +8,7 @@
 
 @section('content')
 
-<div class="grid lg:grid-cols-3 gap-5 mb-5">
+<div class="grid xl:grid-cols-3 gap-5 mb-5">
 
     {{-- SALDO CARD --}}
     <div class="bg-[#1b3a1b] rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between">
@@ -67,13 +67,13 @@
                     <div class="w-full rounded-t-xl transition-all duration-300 group-hover:scale-y-105 origin-bottom"
                         @style([
                             "height:" . max($bar['pct'], 10) . "%",
-                            "background:" . (!empty($bar['current']) ? '#1b3a1b' : '#bbf7d0')
+                            "background:" . (!empty($bar['current']) ? '#0b3d0b' : '#bbf7d0')
                         ])>
                     </div>
                 </div>
 
                 <span class="text-[10px]
-                             {{ !empty($bar['current']) ? 'text-[#1b3a1b] font-semibold' : 'text-gray-400' }}">
+                             {{ !empty($bar['current']) ? 'text-[#0b3d0b] font-semibold' : 'text-gray-400' }}">
                     {{ $bar['month'] }}
                 </span>
 
@@ -87,7 +87,7 @@
 
 
 {{-- ===== BOTTOM ROW ===== --}}
-<div class="grid lg:grid-cols-2 gap-5">
+<div class="grid xl:grid-cols-2 gap-5">
 
     {{-- RINCIAN PER LAPANGAN --}}
     <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                    <div class="h-full bg-[#1b3a1b] rounded-full"
+                    <div class="h-full bg-[#0b3d0b] rounded-full"
                         @style(["width: {$lap['pct']}%"])>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                 <p class="font-semibold text-gray-800 text-sm">Riwayat Transaksi</p>
                 <p class="text-xs text-gray-400 mt-0.5">Terbaru</p>
             </div>
-            <a href="{{ route('owner.bookings') }}" class="text-xs text-[#1b3a1b] font-semibold hover:underline">Lihat semua →</a>
+            <a href="{{ route('owner.bookings') }}" class="text-xs text-[#0b3d0b] font-semibold hover:underline">Lihat semua →</a>
         </div>
 
         <div class="divide-y divide-gray-50">
